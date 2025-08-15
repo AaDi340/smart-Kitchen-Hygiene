@@ -20,7 +20,7 @@ def main():
     CONFIDENCE_THRESHOLD = 0.75
     COLOR_POSITIVE = (0, 255, 0)      # Green
     COLOR_NEGATIVE = (0, 0, 255)    # Red
-    COLOR_UNCERTAIN = (0, 255, 255) # Yellow
+    COLOR_UNHYGIENIC = (0, 255, 255) # Yellow
 
     # --- 2. LOAD BOTH MODELS ---
     print("[INFO] Loading models...")
@@ -74,7 +74,7 @@ def main():
 
             if confidence_score < CONFIDENCE_THRESHOLD:
                 display_text = f"Unhygienic ({confidence_score*100:.0f}%)"
-                display_color = COLOR_UNCERTAIN
+                display_color = COLOR_UNHYGIENIC
             else:
                 label = class_name[2:]
                 display_text = f"{label}: {confidence_score*100:.0f}%"
