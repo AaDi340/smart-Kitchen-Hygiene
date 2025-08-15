@@ -73,7 +73,7 @@ def main():
             display_color = (0,0,0)
 
             if confidence_score < CONFIDENCE_THRESHOLD:
-                display_text = f"Uncertain ({confidence_score*100:.0f}%)"
+                display_text = f"Unhygienic ({confidence_score*100:.0f}%)"
                 display_color = COLOR_UNCERTAIN
             else:
                 label = class_name[2:]
